@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>About Me</title>
+  <style>
+    .listitem{
+        color: red
+    }
+  </style>
+</head>
+<body>
+  <h1>About Me</h1>
+  
+  <ul>
+    <li>Nickname: <span id="nickname"></span>
+    <li>Favorites:  <span id="favorites"></span>
+    <li>Hometown: <span id="hometown"></span>
+   </ul>
+  
+ </body>
+ <script>
+    const getBody = document.querySelector("body")
+    getBody.style = "font-family: Arial, sans-serif"
+    const getNickname = document.getElementById("nickname")
+    getNickname.innerText = "Bran"
+    const getFavorites = document.getElementById("favorites")
+    getFavorites.innerText = "Videogames, pizza, animes"
+    const getHometown = document.getElementById("hometown")
+    getHometown.innerText = "Barrio Mercedes"
+    const getLi = document.querySelectorAll("li")
+    for (let index = 0; index < getLi.length; index++) {
+        getLi[index].className = "listitem"
+    }
+    const getImg = document.createElement("img")
+    getImg.src = "image.jpg"
+    getBody.appendChild(getImg)
+
+ </script>
+</html>
